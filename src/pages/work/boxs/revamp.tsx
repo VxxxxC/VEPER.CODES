@@ -1,5 +1,3 @@
-import React from "react";
-import RevampMobile from "./revampMobile";
 
 const revamp = () => {
   const content = [

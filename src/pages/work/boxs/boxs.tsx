@@ -1,4 +1,3 @@
-import React, { useId } from "react";
 import Selector from "@components/TechIcons";
 import Revamp from "./revamp";
 import RevampMobile from "./revampMobile";
