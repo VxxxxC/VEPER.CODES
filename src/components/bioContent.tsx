@@ -16,11 +16,10 @@ const BioContent = () => {
   };
   return (
     <>
-      <style />
       <MotionDiv delay={0.5}>
         <main
           id="bio"
-          className="my-20 px-10 inline-flex flex-col item-start mobile:w-screen"
+          className="inline-flex flex-col item-start"
           aria-label="bio"
         >
           <div className="mx-[5%] flex justify-between mobile:flex-col mobile:items-center">

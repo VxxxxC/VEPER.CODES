@@ -22,10 +22,10 @@ import Bio from "./bio.astro";
 
   <Header />
   <Body>
-    <main class="mx-[10%]" aria-label="home page">
+    <main class="mx-[10%] mobile:mx-[5%]" aria-label="home page">
       <p
         id="welMsg"
-        class="inline-flex p-5 text-center font-sans text-white text-md dark:bg-zinc-700 bg-zinc-500 rounded-xl"
+        class="inline-flex p-5 my-5 text-center font-sans text-white text-md dark:bg-zinc-700 bg-zinc-500 rounded-xl"
       >
         <HomeWelcomeMsg client:only="react" />
       </p>
