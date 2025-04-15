@@ -4,7 +4,7 @@ import { Menu, Transition } from "@headlessui/react";
 import ThemeToggle from "./ThemeToggle";
 
 function HeaderComponent() {
-  const headerItems = ["Home", "Project"];
+  const headerItems = ["Home", "Project", "Blog"];
 
   const [page, setPage]: any = useState("");
 
