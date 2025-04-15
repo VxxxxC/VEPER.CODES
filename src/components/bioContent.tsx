@@ -81,7 +81,7 @@ const BioContent = () => {
                 </tr>
 
                 <tr>
-                  <td>2023 - present</td>
+                  <td>FEB 2023 - OCT 2024</td>
                   <td>
                     <a href="/work/boxs">
                       <button
