@@ -1,6 +1,6 @@
 ---
 import ThemeToggle from "./ThemeToggle";
-import HeaderComponent from "./HeaderComponent";
+import HamburgerMenu from "./HamburgerMenu";
 import HeaderLogo from "./HeaderLogo.astro";
 ---
 
@@ -8,7 +8,7 @@ import HeaderLogo from "./HeaderLogo.astro";
   <HeaderLogo />
   <div class="fixed w-[100%] p-3 top-0 flex justify-between">
     <div>
-      <HeaderComponent client:only="react" />
+      <HamburgerMenu client:only="react" />
     </div>
     <div class="mobile:hidden">
       <ThemeToggle client:only="react" />
