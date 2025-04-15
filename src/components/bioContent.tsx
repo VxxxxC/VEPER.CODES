@@ -12,7 +12,7 @@ import "./bioContent.css";
 
 const BioContent = () => {
   const btn = () => {
-    localStorage.setItem("page", "Project");
+    localStorage.setItem("page", "Work");
   };
   return (
     <>
