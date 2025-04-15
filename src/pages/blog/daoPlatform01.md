@@ -3,6 +3,7 @@ layout: "../../layouts/BlogLayout.astro"
 title: "Web3 DAO Proposal Platform Implementations with EIP-4337 & EIP-7702"
 description: ""
 pubDate: "15 Apr 2025"
+updatedDate: "16 Apr 2025"
 heroImage: ""
 ---
 

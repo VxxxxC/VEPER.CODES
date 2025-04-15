@@ -26,12 +26,24 @@ const {
     <BaseHead title={title} description={description} />
     <style>
       .title {
-        font-size: 2em;
-        margin: 0.25em 0 0;
+        font-size: 1.5rem;
+        margin: 0 5rem 0 5rem;
       }
       hr {
-        border-top: 1px solid #ddd;
-        margin: 1rem 0;
+        border-top: 1px solid #FFFFFF14;
+        margin: 2.5rem ;
+      }
+      ul {
+        list-style-type: none;
+        padding: unset;
+      }
+      ul li {
+        display: flex;
+      }
+      ul li time {
+        flex: 0 0 130px;
+        font-style: italic;
+        color: #595959;
       }
     </style>
   </head>
@@ -48,28 +60,37 @@ const {
     </nav>
     <main>
       <article>
-        {
-          heroImage && (
-            <img
-              class="inline p-5 rounded-3xl"
-              src={heroImage}
-              alt="titleImage"
-            />
-          )
-        }
-        <h1 class="title">{title}</h1>
-        {pubDate && <time>{pubDate}</time>}
-        {
-          updatedDate && (
-            <div>
-              Last updated on <time>{updatedDate}</time>
-            </div>
-          )
-        }
-        <hr />
+        <ul>
+          {
+            heroImage && (
+              <img
+                class="inline p-5 rounded-3xl"
+                src={heroImage}
+                alt="titleImage"
+              />
+            )
+          }
+          <h1 class="title">{title}</h1>
+          <li class="p-5 inline-flex flex-col items-center">
+            {
+            updatedDate && Date.parse(updatedDate as string) > Date.parse(pubDate as string)
+              ? updatedDate && (
+                  <div>
+                    <time>Last updated on {updatedDate}</time>
+                  </div>
+                )
+              : pubDate && <time>{pubDate}</time>
+          } 
+            </li>
+  
+          <hr />
+        </ul>
+
+        <!-- * NOTE: Content Start right here.. -->
         <slot />
       </article>
     </main>
     <Footer />
   </Body>
+
 </html>
