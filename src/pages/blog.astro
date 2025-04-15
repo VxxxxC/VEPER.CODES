@@ -3,7 +3,7 @@ import BaseHead from "../components/BaseHead.astro";
 import { SITE_TITLE } from "../config";
 
 // Use Astro.glob() to fetch all md or mdx markdown pages from "/project", and then sort them by date.
-const posts = (await Astro.glob("./project/*.{md,mdx}")).sort(
+const posts = (await Astro.glob("./blog/*.{md,mdx}")).sort(
   (a, b) =>
     new Date(b.frontmatter.pubDate).valueOf() -
     new Date(a.frontmatter.pubDate).valueOf()
@@ -22,20 +22,6 @@ posts.map((post) => {
 <html lang="en">
   <head>
     <BaseHead title={SITE_TITLE} description="BLOG" />
-    <style>
-      ul {
-        list-style-type: none;
-        padding: unset;
-      }
-      ul li {
-        display: flex;
-      }
-      ul li time {
-        flex: 0 0 130px;
-        font-style: italic;
-        color: #595959;
-      }
-    </style>
   </head>
 
   <main id="project" class="w-[70%] inline-flex flex-col">
