@@ -2,6 +2,7 @@
 import BaseHead from "../components/BaseHead.astro";
 import Header from "@components/Header.astro";
 import Body from "@components/Body.astro";
+import Footer from "@components/Footer.astro";
 import { SITE_TITLE } from "../config";
 
 // Use Astro.glob() to fetch all md or mdx markdown pages from "/project", and then sort them by date.
@@ -88,8 +89,8 @@ posts.map((post) => {
         </ul>
       </section>
     </main>
-
   </Body>
 
-
+  
+  <Footer />
 </html>
