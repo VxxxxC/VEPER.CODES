@@ -47,6 +47,7 @@ function HeaderComponent() {
                     <a
                       key={item}
                       href={`/${item.toLowerCase()}`}
+                      data-astro-prefetch
                       className={`${
                         checkClick
                           ? "dark:bg-white dark:text-black bg-black text-white font-black"

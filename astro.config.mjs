@@ -5,6 +5,7 @@ import react from "@astrojs/react";
 import tailwind from "@astrojs/tailwind";
 
 export default defineConfig({
+  prefetch: true,
   devToolbar: {
     enabled: true,
   },
