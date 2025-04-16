@@ -4,6 +4,7 @@ import Header from "@components/Header.astro";
 import Body from "@components/Body.astro";
 import Footer from "@components/Footer.astro";
 import { SITE_TITLE } from "../config";
+import { ClientRouter } from "astro:transitions";
 
 // Use Astro.glob() to fetch all md or mdx markdown pages from "/project", and then sort them by date.
 const posts = (await Astro.glob("./blog/*.{md,mdx}")).sort(
@@ -39,20 +40,15 @@ posts.map((post) => {
         color: #595959;
       }
     </style>
-
+    <ClientRouter />
   </head>
 
-  <Header/>
-  
+  <Header />
+
   <Body>
     <main id="blog" class="mx-[10%] inline-flex flex-col">
       <div class="flex flex-col items-start w-[25%]">
-        <h1
-          class="font-black text-2xl pt-5 pb-1"
-          aria-label="blog"
-        >
-          Blog
-        </h1>
+        <h1 class="font-black text-2xl pt-5 pb-1" aria-label="blog">Blog</h1>
         <div class="w-[5rem] self-start mb-1 h-1 bg-gray-600"></div>
       </div>
       <section>
@@ -61,27 +57,27 @@ posts.map((post) => {
             posts.map((post) => (
               <li class="p-5 inline-flex flex-col items-center">
                 <a href={post.url}>
-                <div class="p-2">
-                  
+                  <div class="p-2">
                     <p class="text-xl font-bold">{post.frontmatter.title}</p>
-                  
-                  <time class="text-gray-500" datetime={post.frontmatter.pubDate}>
-                    {new Date(post.frontmatter.pubDate).toDateString()}
-                  </time>
-                </div>
-                {/* <div class="m-2 p-2 bg-gray-700 rounded-t-xl text-white">
+
+                    <time
+                      class="text-gray-500"
+                      datetime={post.frontmatter.pubDate}
+                    >
+                      {new Date(post.frontmatter.pubDate).toDateString()}
+                    </time>
+                  </div>
+                  {/* <div class="m-2 p-2 bg-gray-700 rounded-t-xl text-white">
                   <p>{post.frontmatter.description}</p>
                 </div> */}
-                
-                  {
-                    post.frontmatter.heroImage ? <img
+
+                  {post.frontmatter.heroImage ? (
+                    <img
                       alt="titleImage"
                       class="border rounded-xl border-white"
                       src={post.frontmatter.heroImage}
                     />
-                    : null
-                  }
-                
+                  ) : null}
                 </a>
               </li>
             ))

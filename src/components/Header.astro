@@ -2,6 +2,7 @@
 import ThemeToggle from "./ThemeToggle";
 import HamburgerMenu from "./HamburgerMenu";
 import HeaderLogo from "./HeaderLogo.astro";
+import { ClientRouter } from "astro:transitions";
 ---
 
 <header class="relative z-10 font-vr">
@@ -14,4 +15,5 @@ import HeaderLogo from "./HeaderLogo.astro";
       <ThemeToggle client:only="react" />
     </div>
   </div>
+  <ClientRouter />
 </header>

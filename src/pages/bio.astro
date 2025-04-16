@@ -2,13 +2,14 @@
 import BaseHead from "../components/BaseHead.astro";
 import { SITE_TITLE } from "../config";
 import BioContent from "@components/bioContent";
+import { ClientRouter } from "astro:transitions";
 ---
 
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <BaseHead title={SITE_TITLE} description="BIO" />
+    <ClientRouter />
   </head>
-<BioContent client:only="react"/>
-
+  <BioContent client:only="react" />
 </html>

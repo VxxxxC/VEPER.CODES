@@ -5,6 +5,7 @@ import Footer from "../components/Footer.astro";
 import ReturnButton from "../components/ReturnButton";
 import ThemeToggle from "../components/ThemeToggle";
 import HeaderLogo from "../components/HeaderLogo.astro";
+import { ClientRouter } from "astro:transitions";
 
 export interface Props {
   content: {
@@ -30,8 +31,8 @@ const {
         margin: 0 5rem 0 5rem;
       }
       hr {
-        border-top: 1px solid #FFFFFF14;
-        margin: 2.5rem ;
+        border-top: 1px solid #ffffff14;
+        margin: 2.5rem;
       }
       ul {
         list-style-type: none;
@@ -46,6 +47,7 @@ const {
         color: #595959;
       }
     </style>
+    <ClientRouter />
   </head>
 
   <HeaderLogo />
@@ -73,16 +75,17 @@ const {
           <h1 class="title">{title}</h1>
           <li class="p-5 inline-flex flex-col items-center">
             {
-            updatedDate && Date.parse(updatedDate as string) > Date.parse(pubDate as string)
-              ? updatedDate && (
-                  <div>
-                    <time>Last updated on {updatedDate}</time>
-                  </div>
-                )
-              : pubDate && <time>{pubDate}</time>
-          } 
-            </li>
-  
+              updatedDate &&
+              Date.parse(updatedDate as string) > Date.parse(pubDate as string)
+                ? updatedDate && (
+                    <div>
+                      <time>Last updated on {updatedDate}</time>
+                    </div>
+                  )
+                : pubDate && <time>{pubDate}</time>
+            }
+          </li>
+
           <hr />
         </ul>
 
@@ -92,5 +95,4 @@ const {
     </main>
     <Footer />
   </Body>
-
 </html>
