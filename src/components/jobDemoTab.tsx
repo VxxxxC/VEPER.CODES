@@ -10,21 +10,22 @@ export type tabsPropsType = {
 const JobDemoTab = ({ tabs }: { tabs: tabsPropsType[] }) => {
   return (
     <>
-      <div className="w-full flex flex-col">
+      <div className="h-full w-full flex flex-col mobile:w-screen">
         <Tabs
           aria-label="tabs"
           items={tabs}
-          size="lg"
-          radius="lg"
-          fullWidth={true}
-          variant="solid"
+          size="sm"
+          variant="underlined"
           classNames={{
-            cursor: "w-full",
-            tabContent: "group-data-[selected=true]:text-[#06b6d4]",
+            tab: "max-w-fit px-0 h-12",
+            tabList:
+              "gap-6 w-full relative rounded-none p-0 border-divider",
+            cursor: "w-full dark:bg-[#22d3ee]",
+            tabContent: "dark:group-data-[selected=true]:text-[#06b6d4]",
           }}
         >
           {(item: tabsPropsType) => (
-            <Tab key={item.id} title={item.label}>
+            <Tab className="overflow-y-scroll scroll-smooth" key={item.id} title={item.label}>
               {item.content}
             </Tab>
           )}

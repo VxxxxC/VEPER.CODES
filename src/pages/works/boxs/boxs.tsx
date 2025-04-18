@@ -71,7 +71,7 @@ const Boxs = () => {
       </div>
 
       <div className="mt-5">
-        <fieldset className="h-[65vh] w-full overflow-x-hidden overflow-y-scroll scroll-smooth text-left p-5 rounded-lg border border-zinc-400 dark:border-zinc-700">
+        <fieldset className="h-[95vh] w-full text-left px-5 rounded-lg border border-zinc-400 dark:border-zinc-700">
           <legend className="px-2 text-base font-medium">Demo</legend>
           <JobDemoTab tabs={tabs} />
         </fieldset>
