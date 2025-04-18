@@ -1,4 +1,4 @@
-import { Tabs, Tab } from "@nextui-org/react";
+import { Tabs, Tab } from "@heroui/react";
 import React from "react";
 
 export type tabsPropsType = {
@@ -16,11 +16,10 @@ const JobDemoTab = ({ tabs }: { tabs: tabsPropsType[] }) => {
           items={tabs}
           size="lg"
           radius="lg"
-          color="primary"
           fullWidth={true}
           variant="solid"
           classNames={{
-            cursor: "w-full bg-[#22d3ee]",
+            cursor: "w-full",
             tabContent: "group-data-[selected=true]:text-[#06b6d4]",
           }}
         >
