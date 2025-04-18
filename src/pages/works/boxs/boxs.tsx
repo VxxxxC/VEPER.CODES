@@ -2,7 +2,7 @@ import Selector from "@components/TechIcons";
 import Revamp from "./revamp";
 import RevampMobile from "./revampMobile";
 import NewFeature from "./newFeature";
-import { Tabs, Tab, Card, CardBody, CardHeader } from "@nextui-org/react";
+import { Tabs, Tab, Card, CardBody, CardHeader } from "@heroui/react";
 import JobDemoTab, { type tabsPropsType } from "../../../components/jobDemoTab";
 import { v4 as uuidv4 } from "uuid";
 

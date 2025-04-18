@@ -19,7 +19,7 @@
     "@astrojs/sitemap": "^3.3.0",
     "@astrojs/tailwind": "^6.0.2",
     "@headlessui/react": "^1.7.19",
-    "@nextui-org/react": "^2.6.0",
+    "@heroui/react": "^2.7.6",
     "@types/uuid": "^9.0.8",
     "astro": "^5.7.0",
     "framer-motion": "^11.18.2",
