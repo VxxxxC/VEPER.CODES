@@ -9,12 +9,12 @@ const Boxs = () => {
   const tabs: tabsPropsType[] = [
     {
       id: uuidv4(),
-      label: "UI Revamp",
+      label: "Revamp - UI",
       content: <Revamp />,
     },
     {
       id: uuidv4(),
-      label: "UI Revamp - Mobile Version",
+      label: "Revamp - Mobile UI",
       content: <RevampMobile />,
     },
     {
@@ -71,7 +71,7 @@ const Boxs = () => {
       </div>
 
       <div className="mt-5">
-        <fieldset className="h-[95vh] w-full text-left px-5 rounded-lg border border-zinc-400 dark:border-zinc-700">
+        <fieldset className="h-[75vh] text-left px-5 rounded-lg border border-zinc-400 dark:border-zinc-700">
           <legend className="px-2 text-base font-medium">Demo</legend>
           <JobDemoTab tabs={tabs} />
         </fieldset>
