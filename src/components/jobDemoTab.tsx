@@ -10,16 +10,16 @@ export type tabsPropsType = {
 const JobDemoTab = ({ tabs }: { tabs: tabsPropsType[] }) => {
   return (
     <>
-      <div className="h-full w-full flex flex-col mobile:w-screen">
+      <div className="h-full flex flex-col">
         <Tabs
           aria-label="tabs"
-          items={tabs}
           size="sm"
+          items={tabs}
           variant="underlined"
           classNames={{
-            tab: "max-w-fit px-0 h-12",
+            tab: "max-w-fit px-0 h-12 mobile:h-8",
             tabList:
-              "gap-6 w-full relative rounded-none p-0 border-divider",
+              "gap-6 w-full relative rounded-none p-0 border-divider mobile:grid mobile:grid-cols-2 mobile:pt-5 mobile:px-5",
             cursor: "w-full dark:bg-[#22d3ee]",
             tabContent: "dark:group-data-[selected=true]:text-[#06b6d4]",
           }}

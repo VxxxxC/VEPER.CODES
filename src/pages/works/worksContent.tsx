@@ -17,7 +17,7 @@ const jobContent = ({ props }: { props?: React.ReactNode }) => {
             classNames={{
               tab: "max-w-fit px-0 h-12",
               tabList:
-                "gap-6 w-full relative rounded-none p-0 border-b border-divider",
+                "gap-6 w-full relative rounded-none p-0 border-divider",
               cursor: "w-full dark:bg-[#22d3ee]",
               tabContent: "dark:group-data-[selected=true]:text-[#06b6d4]",
             }}
@@ -28,7 +28,7 @@ const jobContent = ({ props }: { props?: React.ReactNode }) => {
             {works.map(({ id, content }) => (
               <>
                 <Tab key={id} title={id}>
-                  <Card>
+                  <Card className="w-full">
                     <CardBody>
                       <MotionDiv delay={0.5}>
                         <div>{content}</div>
