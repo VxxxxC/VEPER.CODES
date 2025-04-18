@@ -4,7 +4,7 @@ import BaseHead from "@components/BaseHead.astro"
 import Header from "@components/Header.astro";
 import Body from "@components/Body.astro";
 import Footer from "@components/Footer.astro";
-
+import WorksContent from "./worksContent";
 import { ClientRouter } from "astro:transitions";
 ---
 
@@ -22,8 +22,9 @@ import { ClientRouter } from "astro:transitions";
 
   <Header />
   <Body>
-    <main class="mx-[10%] mobile:mx-[5%]" aria-label="works">
-      This is Works page.
+    <main class="mx-[5%] flex flex-col gap-5" aria-label="home page">
+      <div class="self-start underline underline-offset-8 text-xl font-semibold">WORK</div>
+      <WorksContent client:only="react" />
     </main>
     <Footer />
   </Body>
