@@ -1,6 +1,6 @@
 import { Fragment, useEffect, useState } from "react";
 import { IoLogoGithub, IoMenu } from "react-icons/io5/index";
-import { Menu, Transition } from "@headlessui/react";
+import { Menu, MenuButton, MenuItems,MenuItem, Transition } from "@headlessui/react";
 import ThemeToggle from "./ThemeToggle";
 
 function HeaderComponent() {
@@ -21,12 +21,12 @@ function HeaderComponent() {
 
   return (
     <Menu>
-      <Menu.Button
+      <MenuButton
         className="relative p-3 rounded-lg border border-gray-400 dark:border-gray-600 dark:hover:bg-zinc-600 hover:bg-zinc-300 focus:ring-2 focus:ring-offset-2 focus:ring-violet-500 dark:focus:ring-violet-700 transition duration-300"
         aria-label="drop down menu"
       >
         <IoMenu size={20} />
-      </Menu.Button>
+      </MenuButton>
 
       <Transition
         as={Fragment}
@@ -37,11 +37,11 @@ function HeaderComponent() {
         leaveFrom="transform opacity-100 scale-100"
         leaveTo="transform opacity-0 scale-95"
       >
-        <Menu.Items className="absolute left-5 z-20 w-56 p-3 flex flex-col rounded-xl dark:bg-neutral-700 bg-neutral-400 dark:text-white text-black bg-opacity-30">
+        <MenuItems className="absolute left-5 z-20 w-56 p-3 flex flex-col rounded-xl dark:bg-neutral-700 bg-neutral-400 dark:text-white text-black bg-opacity-30">
           {headerItems.map((item) => {
             const checkClick = item === page;
             return (
-              <Menu.Item>
+              <MenuItem>
                 {({ active }) => (
                   <button onClick={() => localStorage.setItem("page", item)}>
                     <a
@@ -58,7 +58,7 @@ function HeaderComponent() {
                     </a>
                   </button>
                 )}
-              </Menu.Item>
+              </MenuItem>
             );
           })}
           <a
@@ -73,7 +73,7 @@ function HeaderComponent() {
           <div className="mobile:visible mobile:flex mobile:justify-center hidden">
             <ThemeToggle />
           </div>
-        </Menu.Items>
+        </MenuItems>
       </Transition>
     </Menu>
   );
