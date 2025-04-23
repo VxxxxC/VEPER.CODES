@@ -1,10 +1,16 @@
 import { Fragment, useEffect, useState } from "react";
 import { IoLogoGithub, IoMenu } from "react-icons/io5/index";
-import { Menu, MenuButton, MenuItems,MenuItem, Transition } from "@headlessui/react";
+import {
+  Menu,
+  MenuButton,
+  MenuItems,
+  MenuItem,
+  Transition,
+} from "@headlessui/react";
 import ThemeToggle from "./ThemeToggle";
 
 function HeaderComponent() {
-  const headerItems = ["Home", "Works", "Project", "Blog"];
+  const headerItems = ["Home", "Works", "Project", "Blogs"];
 
   const [page, setPage]: any = useState("");
 

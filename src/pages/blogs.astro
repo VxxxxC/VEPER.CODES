@@ -4,10 +4,13 @@ import Header from "@components/Header.astro";
 import Body from "@components/Body.astro";
 import Footer from "@components/Footer.astro";
 import { SITE_TITLE } from "../config";
-// Use Astro.glob() to fetch all md or mdx markdown pages from "/project", and then sort them by date.
-const posts = Object.values(
+import { getCollection } from "astro:content";
+
+const posts: any[] = Object.values(
   import.meta.glob("./blog/*.{md,mdx}", { eager: true })
 );
+console.log({ posts });
+// const posts = await getCollection("blogs");
 ---
 
 <!DOCTYPE html>
