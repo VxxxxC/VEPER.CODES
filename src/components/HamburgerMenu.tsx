@@ -10,7 +10,7 @@ import {
 import ThemeToggle from "./ThemeToggle";
 
 function HeaderComponent() {
-  const headerItems = ["Home", "Works", "Project", "Blogs"];
+  const headerItems = ["Home", "Works", "Project"];
 
   const [page, setPage]: any = useState("");
 
