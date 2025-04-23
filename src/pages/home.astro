@@ -6,7 +6,6 @@ import Body from "@components/Body.astro";
 import Footer from "@components/Footer.astro";
 import HomeWelcomeMsg from "../components/HomeWelcomeMsg";
 import Bio from "./bio.astro";
-import { ClientRouter } from "astro:transitions";
 ---
 
 <!DOCTYPE html>
@@ -18,7 +17,6 @@ import { ClientRouter } from "astro:transitions";
         margin-top: 10px;
       }
     </style>
-    <ClientRouter />
   </head>
 
   <Header />
@@ -34,4 +32,5 @@ import { ClientRouter } from "astro:transitions";
     </main>
     <Footer />
   </Body>
+
 </html>

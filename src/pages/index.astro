@@ -2,7 +2,6 @@
 import BaseHead from "../components/BaseHead.astro";
 import { SITE_TITLE } from "../config";
 import Home from "./home.astro";
-import { ClientRouter } from "astro:transitions";
 ---
 
 <script>
@@ -16,6 +15,5 @@ import { ClientRouter } from "astro:transitions";
   <head>
     <BaseHead title={SITE_TITLE} description="index" />
     <Home />
-    <ClientRouter />
   </head>
 </html>

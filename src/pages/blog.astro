@@ -4,8 +4,6 @@ import Header from "@components/Header.astro";
 import Body from "@components/Body.astro";
 import Footer from "@components/Footer.astro";
 import { SITE_TITLE } from "../config";
-import { ClientRouter } from "astro:transitions";
-
 // Use Astro.glob() to fetch all md or mdx markdown pages from "/project", and then sort them by date.
 const posts = (await Astro.glob("./blog/*.{md,mdx}")).sort(
   (a, b) =>
@@ -40,7 +38,6 @@ posts.map((post) => {
         color: #595959;
       }
     </style>
-    <ClientRouter />
   </head>
 
   <Header />
@@ -87,4 +84,6 @@ posts.map((post) => {
     </main>
     <Footer />
   </Body>
+
+
 </html>

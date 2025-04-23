@@ -9,7 +9,6 @@ import { ClientRouter } from "astro:transitions";
 <html lang="en">
   <head>
     <BaseHead title={SITE_TITLE} description="BIO" />
-    <ClientRouter />
   </head>
   <BioContent client:only="react" />
 </html>
