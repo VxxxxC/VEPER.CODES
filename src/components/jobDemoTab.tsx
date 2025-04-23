@@ -25,7 +25,11 @@ const JobDemoTab = ({ tabs }: { tabs: tabsPropsType[] }) => {
           }}
         >
           {(item: tabsPropsType) => (
-            <Tab className="overflow-y-scroll scroll-smooth" key={item.id} title={item.label}>
+            <Tab
+              className="overflow-x-hidden overflow-y-auto scroll-smooth"
+              key={item.id}
+              title={item.label}
+            >
               {item.content}
             </Tab>
           )}
