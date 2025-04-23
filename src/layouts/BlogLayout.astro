@@ -55,40 +55,37 @@ const {
           <ReturnButton client:only="react" />
         </div>
       </nav>
-      <main>
-        <article>
-          <ul>
-            {
-              heroImage && (
-                <img
-                  class="inline p-5 rounded-3xl object-contain"
-                  src={heroImage}
-                  alt="titleImage"
-                />
-              )
-            }
-            <h1 class="title">{title}</h1>
-            <li class="p-5 inline-flex flex-col items-center">
-              {
-                updatedDate &&
-                Date.parse(updatedDate as string) >
-                  Date.parse(pubDate as string)
-                  ? updatedDate && (
-                      <div>
-                        <time>Last updated on {updatedDate}</time>
-                      </div>
-                    )
-                  : pubDate && <time>{pubDate}</time>
-              }
-            </li>
+      <ul>
+        {
+          heroImage && (
+            <img
+              class="inline p-5 rounded-3xl object-contain"
+              src={heroImage}
+              alt="titleImage"
+            />
+          )
+        }
+        <h1 class="title">{title}</h1>
+        <li class="p-5 inline-flex flex-col items-center">
+          {
+            updatedDate &&
+            Date.parse(updatedDate as string) > Date.parse(pubDate as string)
+              ? updatedDate && (
+                  <div>
+                    <time>Last updated on {updatedDate}</time>
+                  </div>
+                )
+              : pubDate && <time>{pubDate}</time>
+          }
+        </li>
 
-            <hr />
-          </ul>
+        <hr />
+      </ul>
 
-          <!-- * NOTE: Content Start right here.. -->
-          <slot />
-        </article>
-      </main>
+      <!-- * NOTE: Content Start right here.. -->
+      <div class="mb-20 flex flex-col items-center gap-10 font-thin font-sans">
+        <slot />
+      </div>
       <Footer />
     </div>
   </Body>
