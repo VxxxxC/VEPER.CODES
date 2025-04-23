@@ -5,10 +5,8 @@ import Body from "@components/Body.astro";
 import Footer from "@components/Footer.astro";
 import { SITE_TITLE } from "../config";
 // Use Astro.glob() to fetch all md or mdx markdown pages from "/project", and then sort them by date.
-const posts = (await Astro.glob("./blog/*.{md,mdx}")).sort(
-  (a, b) =>
-    new Date(b.frontmatter.pubDate).valueOf() -
-    new Date(a.frontmatter.pubDate).valueOf()
+const posts = Object.values(
+  import.meta.glob("./blog/*.{md,mdx}", { eager: true })
 );
 ---
 
