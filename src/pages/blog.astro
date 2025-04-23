@@ -35,7 +35,7 @@ const posts = (await Astro.glob("./blog/*.{md,mdx}")).sort(
   <Header />
 
   <Body>
-    <main id="blog" class="mx-[10%] inline-flex flex-col">
+    <main id="blog" class="mx-[10%] mobile:mx-5 inline-flex flex-col">
       <div class="flex flex-col items-start w-[25%]">
         <h1 class="font-black text-2xl pt-5 pb-1" aria-label="blog">Blog</h1>
         <div class="w-[5rem] self-start mb-1 h-1 bg-gray-600"></div>
