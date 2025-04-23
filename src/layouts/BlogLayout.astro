@@ -6,6 +6,7 @@ import ReturnButton from "../components/ReturnButton";
 import ThemeToggle from "../components/ThemeToggle";
 import HeaderLogo from "../components/HeaderLogo.astro";
 import { ClientRouter } from "astro:transitions";
+import Header from "@components/Header.astro";
 
 export interface Props {
   content: {
@@ -49,14 +50,11 @@ const {
     </style>
   </head>
 
-  <HeaderLogo />
+  <Header />
   <Body>
-    <nav class="fixed w-[100%] p-3 top-0 flex justify-between">
+    <nav class="w-[100%] p-3 flex justify-between">
       <div>
         <ReturnButton client:only="react" />
-      </div>
-      <div>
-        <ThemeToggle client:only="react" />
       </div>
     </nav>
     <main>
@@ -65,7 +63,7 @@ const {
           {
             heroImage && (
               <img
-                class="inline p-5 rounded-3xl"
+                class="inline p-5 rounded-3xl object-contain"
                 src={heroImage}
                 alt="titleImage"
               />
@@ -94,5 +92,6 @@ const {
     </main>
     <Footer />
   </Body>
+
 
 </html>

@@ -10,14 +10,6 @@ const posts = (await Astro.glob("./blog/*.{md,mdx}")).sort(
     new Date(b.frontmatter.pubDate).valueOf() -
     new Date(a.frontmatter.pubDate).valueOf()
 );
-
-/*
-let count = 0;
-
-posts.map((post) => {
-  console.log((count += 1), post.frontmatter);
-});
-*/
 ---
 
 <!DOCTYPE html>
@@ -49,12 +41,22 @@ posts.map((post) => {
         <div class="w-[5rem] self-start mb-1 h-1 bg-gray-600"></div>
       </div>
       <section>
-        <ul class="grid grid-cols-2 mobile:grid-cols-none place-content-center">
+        <ul
+          class="grid grid-cols-2 mobile:grid-cols-none mobile:mx-2 place-content-center"
+        >
           {
             posts.map((post) => (
               <li class="p-5 inline-flex flex-col items-center">
                 <a href={post.url}>
-                  <div class="p-2">
+                  <div class="p-2 max-w-[40rem] object-contain">
+                    {post.frontmatter.heroImage ? (
+                      <img
+                        alt="titleImage"
+                        class="border rounded-xl border-white"
+                        src={post.frontmatter.heroImage}
+                      />
+                    ) : null}
+
                     <p class="text-xl font-bold">{post.frontmatter.title}</p>
 
                     <time
@@ -64,17 +66,6 @@ posts.map((post) => {
                       {new Date(post.frontmatter.pubDate).toDateString()}
                     </time>
                   </div>
-                  {/* <div class="m-2 p-2 bg-gray-700 rounded-t-xl text-white">
-                  <p>{post.frontmatter.description}</p>
-                </div> */}
-
-                  {post.frontmatter.heroImage ? (
-                    <img
-                      alt="titleImage"
-                      class="border rounded-xl border-white"
-                      src={post.frontmatter.heroImage}
-                    />
-                  ) : null}
                 </a>
               </li>
             ))

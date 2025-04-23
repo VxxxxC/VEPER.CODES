@@ -1,10 +1,10 @@
 ---
 layout: "../../layouts/BlogLayout.astro"
 title: "Web3 DAO Proposal Platform Implementations with EIP-4337 & EIP-7702"
-description: ""
+description: "Account Abstraction"
 pubDate: "15 Apr 2025"
 updatedDate: "16 Apr 2025"
-heroImage: ""
+heroImage: "https://www.erc4337.io/account-abstraction-hero.jpeg"
 ---
 
 ### 1. Frontend Navigation Flow Diagram
