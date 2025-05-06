@@ -26,7 +26,12 @@ const Boxs = () => {
 
   return (
     <div id="boxs" className="h-full w-full flex flex-col items-center">
-      <div className="text-xl font-bold">BOXS - Frontend Developer</div>
+      <div className="flex flex-row items-center space-x-1">
+        <div className="text-xl font-bold">BOXS - Frontend Developer</div>
+        <div className="text-sm font-black px-1 leading-4 dark:bg-slate-500 text-cyan-500 bg-slate-300">
+          2024-2025
+        </div>
+      </div>
       <div className="h-3/5 mobile:h-3/4 flex flex-rows mobile:flex-col justify-center content-center gap-2">
         <fieldset className="w-full flex flex-col items-center justify-center text-left p-5 rounded-lg border border-zinc-400 dark:border-zinc-700">
           <legend className="px-2 text-base font-medium">
