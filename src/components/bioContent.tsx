@@ -11,8 +11,8 @@ import { MdKeyboardArrowRight } from "react-icons/md/index";
 import "./bioContent.css";
 
 const BioContent = () => {
-  const btn = () => {
-    localStorage.setItem("page", "Work");
+  const btn = (value: string) => {
+    localStorage.setItem("page", value);
   };
   return (
     <>
@@ -38,7 +38,7 @@ const BioContent = () => {
             <a href="/project" data-astro-prefetch>
               <button
                 className="py-2 px-8 border-4 border-double rounded-lg border-teal-800 bg-teal-300 text-teal-900 hover:border-teal-300 hover:bg-teal-800 hover:text-teal-300 font-sans font-bold"
-                onClick={btn}
+                onClick={() => btn("Project")}
               >
                 <div className="flex justify-center items-center gap-4">
                   <p>Portfolio</p>
@@ -83,10 +83,10 @@ const BioContent = () => {
                 <tr>
                   <td>FEB 2023 - OCT 2024</td>
                   <td>
-                    <a href="/work/boxs" data-astro-prefetch>
+                    <a href="/works/#boxs" data-astro-prefetch>
                       <button
                         className="py-2 px-8 border-4 border-double rounded-lg border-orange-800 bg-orange-300 text-orange-900 hover:border-purple-300 hover:bg-purple-800 hover:text-purple-300 font-sans font-bold"
-                        onClick={btn}
+                        onClick={() => btn("Works")}
                       >
                         <div className="flex justify-center items-center gap-4">
                           <p>Frontend Developer at BOXS Limited</p>
