@@ -1,15 +1,21 @@
-### VEPER.CODE 
----
-A personal portfolio website, made by Astro framework 
-###### HOMEPAGE : [veper.codes](https://www.veper.codes/)
+## <font style="color:red">Archived Project</font>
 
-## Project Stack 
-- [Astro](https://astro.build/) 
+### VEPER.CODE
+
+---
+
+A personal portfolio website, made by Astro framework
+
+###### HOMEPAGE : [lagacy.veper.codes](https://legacy.veper.codes/)
+
+## Project Stack
+
+- [Astro](https://astro.build/)
 - [React](https://reactjs.org/)
 - [Tailwindcss](https://tailwindcss.com/)
 - [FramerMotion](https://www.framer.com/motion/)
 
-## Project Struture 
+## Project Struture
 
 ```
 $PROJECT_ROOT
