@@ -1,4 +1,4 @@
-## <font style="color:red">Archived Project</font>
+# Archived Project
 
 ### VEPER.CODE
 
